@@ -11,7 +11,6 @@ function getMaxDigit(number) {
 	}
 	return Number(maxValue);
 }
-console.log(getMaxDigit(1236));
 
 // Exercise 2
 function exponent(num, pow) {
@@ -21,7 +20,6 @@ function exponent(num, pow) {
 	}
 	return result;
 }
-console.log(exponent(4, 2));
 
 // Exercise 3
 function bigLetter(name) {
@@ -31,20 +29,17 @@ function bigLetter(name) {
 	const formattedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 	return formattedName;
 }
-console.log(bigLetter('aSAVAV'));
 
 // Exercise 4
 function sum(price, tax = 19.5) {
 	let money = (price * (100 - tax)) / 100;
 	return money;
 }
-console.log(sum(1000));
 
 // Exercise 5
 function getRandomNumber(N, M) {
 	return Number((Math.random() * (M - N) + N).toFixed(0));
 }
-console.log(getRandomNumber(1, 10));
 
 // Exercise 6
 function countLatter(letter, word) {
@@ -57,7 +52,6 @@ function countLatter(letter, word) {
 	}
 	return count;
 }
-console.log(countLatter('a', 'affae'));
 
 // Exercise 7,8
 function convertCurrency(symbol) {
@@ -69,7 +63,6 @@ function convertCurrency(symbol) {
 		return "Not a correct";
 	}
 }
-console.log(convertCurrency('2500 uah'));
 
 // Exercise 9
 function getRandomPassword(length = 8) {
@@ -80,14 +73,12 @@ function getRandomPassword(length = 8) {
 	}
 	return password;
 }
-console.log(getRandomPassword(5));
 
 // Exercise 10
 function deleteLatter(letter, word) {
 	const serchLetter = new RegExp(letter, 'gi');
 	return word.replace(serchLetter, '');
 }
-console.log(deleteLatter('a', 'efaaAAAAAefaaaavseaaav'));
 
 // Exercise 11
 function isPalyndrom(word) {
@@ -95,7 +86,6 @@ function isPalyndrom(word) {
 	const secondWord = firstWord.split('').reverse().join('');
 	return firstWord === secondWord;
 }
-console.log(isPalyndrom("worow"));
 
 // Exercise 12
 function deleteDuplicateLetter(word) {
@@ -109,4 +99,16 @@ function deleteDuplicateLetter(word) {
 	}
 	return result;
 }
-console.log(deleteDuplicateLetter('asfigerasf'));
+console.log(`
+Function 1:   ${getMaxDigit(12524523)}
+Function 2:   ${exponent(4, 2)}
+Function 3:   ${bigLetter('aSAVAV')}
+Function 4:   ${sum(1000)}
+Function 5:   ${getRandomNumber(1, 10)}
+Function 6:   ${countLatter('a', 'affae')}
+Function 7,8: ${convertCurrency('2500 uah')}
+Function 9:   ${getRandomPassword(5)}
+Function 10:  ${deleteLatter('a', 'efaaAAAAAefaaaavseaaav')}
+Function 11:  ${isPalyndrom("worow")}
+Function 12:  ${deleteDuplicateLetter('asfigerasf')}
+`);
