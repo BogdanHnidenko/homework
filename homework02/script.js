@@ -8,7 +8,7 @@ while ((Number.isInteger(numN) === false) || (numN <= 0)) {
 
 let numM = Number(prompt('Введіть число M:'));
 while ((Number.isInteger(numM) === false) || (numN >= numM)) {
-	alert('Введіть ціле число M більше числа N');
+	alert(`Введіть ціле число M більше числа N: ${numN}`);
 	numM = Number(prompt('Введіть число M:'));
 };
 
