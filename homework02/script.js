@@ -1,10 +1,14 @@
 
 let numN = Number(prompt('Введіть число N:'));
-let numM = Number(prompt('Введіть число M:'));
-
-while ((numN % 1 !== 0 || numM % 1 !== 0) || (numN > numM)) {
-	alert('Введіть ціле число, а також зверніть увагу що N повинно бути менше M');
+while ((Number.isInteger(numN) === false) || (numN <= 0)) {
+	alert('Введіть ціле число N більше 0');
 	numN = Number(prompt('Введіть число N:'));
+};
+
+
+let numM = Number(prompt('Введіть число M:'));
+while ((Number.isInteger(numM) === false) || (numN >= numM)) {
+	alert('Введіть ціле число M більше числа N');
 	numM = Number(prompt('Введіть число M:'));
 };
 
